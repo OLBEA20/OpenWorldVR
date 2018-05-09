@@ -5,51 +5,48 @@ namespace Assets.Script.Src
 {
     public class HandInteraction : MonoBehaviour
     {
-        public SteamVR_TrackedController controller;
-        public Transform head;
-        public float velocityMultiplier = 1f;
+        public SteamVR_TrackedController Controller;
+        public Transform Head;
+        public float VelocityMultiplier = 1f;
 
         [SerializeField] private SkinnedMeshRenderer _skinnedMeshRenderer;
 
-        private GameObject objectInHand;
-        private GameObject objectColliding;
+        private GameObject _objectInHand;
+        private GameObject _objectColliding;
 
-        private LayerMask grabbable;
+        private LayerMask _grabbable;
 
         private HandAppearance _handAppearance;
 
-        private SteamVR_Controller.Device controllerDevice
-        {
-            get { return SteamVR_Controller.Input((int)controller.controllerIndex); }
-        }
+        private SteamVR_Controller.Device ControllerDevice => SteamVR_Controller.Input((int)Controller.controllerIndex);
 
         void OnEnable()
         {
-            controller.Gripped += Grab;
-            controller.Ungripped += ReleaseObject;
+            Controller.Gripped += Grab;
+            Controller.Ungripped += ReleaseObject;
         }
 
         void OnDisable()
         {
-            controller.Gripped -= Grab;
-            controller.Ungripped -= ReleaseObject;
+            Controller.Gripped -= Grab;
+            Controller.Ungripped -= ReleaseObject;
         }
 
         void Awake()
         {
             _handAppearance = new HandAppearance(_skinnedMeshRenderer);
-            grabbable = 1 << 8;
+            _grabbable = 256;
         }
 
         void Grab(object sender, ClickedEventArgs e)
         {
-            if (!objectInHand && objectColliding)
+            if (!_objectInHand && _objectColliding)
             {
-                objectInHand = objectColliding;
-                objectColliding = null;
+                _objectInHand = _objectColliding;
+                _objectColliding = null;
 
                 var joint = AddFixedJoint();
-                joint.connectedBody = objectInHand.GetComponent<Rigidbody>();
+                joint.connectedBody = _objectInHand.GetComponent<Rigidbody>();
 
                 _handAppearance.HideHand();
             }
@@ -57,17 +54,16 @@ namespace Assets.Script.Src
 
         void ReleaseObject(object sender, ClickedEventArgs e)
         {
-            if (objectInHand)
+            if (!_objectInHand) {return;}
+            
+            if (GetComponent<FixedJoint>())
             {
-                if (GetComponent<FixedJoint>())
-                {
-                    RemoveLinkBetweenHandAndObjectInHand();
-                    AddVelocityToObjectInHand();
+                RemoveLinkBetweenHandAndObjectInHand();
+                AddVelocityToObjectInHand();
 
-                    _handAppearance.ShowHand();
-                }
-                objectInHand = null;
+                _handAppearance.ShowHand();
             }
+            _objectInHand = null;
         }
 
         void RemoveLinkBetweenHandAndObjectInHand()
@@ -78,8 +74,8 @@ namespace Assets.Script.Src
 
         void AddVelocityToObjectInHand() 
         {
-            objectInHand.GetComponent<Rigidbody>().velocity = velocityMultiplier * (head.rotation * controllerDevice.velocity);
-            objectInHand.GetComponent<Rigidbody>().angularVelocity = velocityMultiplier * (head.rotation * controllerDevice.angularVelocity);
+            _objectInHand.GetComponent<Rigidbody>().velocity = VelocityMultiplier * (Head.rotation * ControllerDevice.velocity);
+            _objectInHand.GetComponent<Rigidbody>().angularVelocity = VelocityMultiplier * (Head.rotation * ControllerDevice.angularVelocity);
         }
 
         private FixedJoint AddFixedJoint()
@@ -92,7 +88,7 @@ namespace Assets.Script.Src
 
         void OnTriggerEnter(Collider other)
         {
-            if (((1 << other.gameObject.layer) & grabbable) != 0)
+            if (((1 << other.gameObject.layer) & _grabbable) != 0)
             {
                 ObjectColliding = other.gameObject;
             }
@@ -101,7 +97,7 @@ namespace Assets.Script.Src
 
         void OnTriggerStay(Collider other)
         {
-            if (((1 << other.gameObject.layer) & grabbable) != 0)
+            if (((1 << other.gameObject.layer) & _grabbable) != 0)
             {
                 ObjectColliding = other.gameObject;
             }
@@ -109,9 +105,9 @@ namespace Assets.Script.Src
 
         void OnTriggerExit(Collider other)
         {
-            if (((1 << other.gameObject.layer) & grabbable) != 0)
+            if (((1 << other.gameObject.layer) & _grabbable) != 0)
             {
-                if (other.gameObject.Equals(objectColliding))
+                if (other.gameObject.Equals(_objectColliding))
                 {
                     ObjectColliding = null;
                 }
@@ -128,19 +124,19 @@ namespace Assets.Script.Src
 
             get
             {
-                return objectColliding;
+                return _objectColliding;
             }
 
             set
             {
                 if (value == null) {
-                    objectColliding = null;
+                    _objectColliding = null;
                     return;
                 }
 
                 if (value.GetComponent<Rigidbody>())
                 {
-                    objectColliding = value;
+                    _objectColliding = value;
                 }
             }
         }
