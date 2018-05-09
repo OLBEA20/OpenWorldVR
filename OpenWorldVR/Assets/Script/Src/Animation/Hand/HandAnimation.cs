@@ -52,14 +52,5 @@ namespace Assets.Script.Src.Animation.Hand
             _animator.SetBool("close_thumb", false);
         }
 
-        public void HideHand()
-        {
-            _skinnedMeshRenderer.enabled = false;
-        }
-
-        public void ShowHand()
-        {
-            _skinnedMeshRenderer.enabled = true;
-        }
     }
 }

@@ -9,12 +9,14 @@ namespace Assets.Script.Src
         public Transform head;
         public float velocityMultiplier = 1f;
 
+        [SerializeField] private SkinnedMeshRenderer _skinnedMeshRenderer;
+
         private GameObject objectInHand;
         private GameObject objectColliding;
 
         private LayerMask grabbable;
 
-        private HandAnimation handAnimation;
+        private HandAppearance _handAppearance;
 
         private SteamVR_Controller.Device controllerDevice
         {
@@ -35,23 +37,21 @@ namespace Assets.Script.Src
 
         void Awake()
         {
-            handAnimation = GetComponent<HandAnimation>();
-            grabbable = 1 << 16;
+            _handAppearance = new HandAppearance(_skinnedMeshRenderer);
+            grabbable = 1 << 8;
         }
 
         void Grab(object sender, ClickedEventArgs e)
         {
             if (!objectInHand && objectColliding)
             {
-                handAnimation.CloseHand();
-
                 objectInHand = objectColliding;
                 objectColliding = null;
 
                 var joint = AddFixedJoint();
                 joint.connectedBody = objectInHand.GetComponent<Rigidbody>();
 
-                handAnimation.HideHand();
+                _handAppearance.HideHand();
             }
         }
 
@@ -61,12 +61,10 @@ namespace Assets.Script.Src
             {
                 if (GetComponent<FixedJoint>())
                 {
-                    handAnimation.OpenHand();
-
                     RemoveLinkBetweenHandAndObjectInHand();
                     AddVelocityToObjectInHand();
 
-                    handAnimation.ShowHand();
+                    _handAppearance.ShowHand();
                 }
                 objectInHand = null;
             }
@@ -122,8 +120,7 @@ namespace Assets.Script.Src
 
         private void OnJointBreak(float breakForce)
         {
-            handAnimation.OpenHand();
-            handAnimation.ShowHand();
+            _handAppearance.ShowHand();
         }
 
         public GameObject ObjectColliding
