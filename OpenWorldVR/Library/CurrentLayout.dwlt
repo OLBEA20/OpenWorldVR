@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 3}
-  m_MinSize: {x: 950, y: 350}
+  m_MinSize: {x: 950, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -40,17 +40,17 @@ MonoBehaviour:
     y: 0
     width: 1441
     height: 606
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 12}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 17}
   - {fileID: 15}
   - {fileID: 18}
   - {fileID: 14}
   - {fileID: 12}
-  m_Selected: 4
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 4
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -72,7 +72,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &4
 MonoBehaviour:
@@ -135,10 +135,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 579, y: 300}
+  m_MinSize: {x: 679, y: 321}
   m_MaxSize: {x: 12004, y: 8021}
   vertical: 0
-  controlID: 122
+  controlID: 57
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -159,10 +159,10 @@ MonoBehaviour:
     y: 0
     width: 1643
     height: 947
-  m_MinSize: {x: 304, y: 300}
+  m_MinSize: {x: 404, y: 321}
   m_MaxSize: {x: 8004, y: 8021}
   vertical: 1
-  controlID: 123
+  controlID: 58
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -183,10 +183,10 @@ MonoBehaviour:
     y: 0
     width: 1643
     height: 606
-  m_MinSize: {x: 304, y: 200}
+  m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 54
+  controlID: 59
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -354,7 +354,7 @@ MonoBehaviour:
       name: Assembly-CSharp-Editor.dll
       fullName: G:/Unity/OpenWorldVR/OpenWorldVR/OpenWorldVR/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
       resultStatus: 1
-      duration: 0.2086707
+      duration: 0.3684204
       messages: 
       output: 
       stacktrace: 
@@ -366,7 +366,7 @@ MonoBehaviour:
       name: Assets
       fullName: Assets
       resultStatus: 1
-      duration: 0.1951347
+      duration: 0.3551091
       messages: 
       output: 
       stacktrace: 
@@ -378,7 +378,7 @@ MonoBehaviour:
       name: Editor
       fullName: Assets.Editor
       resultStatus: 1
-      duration: 0.1817843
+      duration: 0.3409084
       messages: 
       output: 
       stacktrace: 
@@ -390,7 +390,7 @@ MonoBehaviour:
       name: Script
       fullName: Assets.Editor.Script
       resultStatus: 1
-      duration: 0.1680784
+      duration: 0.3301839
       messages: 
       output: 
       stacktrace: 
@@ -402,7 +402,7 @@ MonoBehaviour:
       name: Tests
       fullName: Assets.Editor.Script.Tests
       resultStatus: 1
-      duration: 0.1548014
+      duration: 0.3164084
       messages: 
       output: 
       stacktrace: 
@@ -410,11 +410,11 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 1
-    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.HandAnimationTest][suite]'
-      name: HandAnimationTest
-      fullName: Assets.Editor.Script.Tests.HandAnimationTest
+    - id: '[Assets.Editor.Script.Tests.Animation][suite]'
+      name: Animation
+      fullName: Assets.Editor.Script.Tests.Animation
       resultStatus: 1
-      duration: 0.1492306
+      duration: 0.3030218
       messages: 
       output: 
       stacktrace: 
@@ -422,11 +422,23 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 1
-    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.HandAnimationTest.when_closing_hand_then_hand_is_closed]'
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAnimationTest][suite]'
+      name: HandAnimationTest
+      fullName: Assets.Editor.Script.Tests.Animation.HandAnimationTest
+      resultStatus: 1
+      duration: 0.2898773
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAnimationTest.when_closing_hand_then_hand_is_closed]'
       name: when_closing_hand_then_hand_is_closed
-      fullName: Assets.Editor.Script.Tests.HandAnimationTest.when_closing_hand_then_hand_is_closed
-      resultStatus: 0
-      duration: 0
+      fullName: Assets.Editor.Script.Tests.Animation.HandAnimationTest.when_closing_hand_then_hand_is_closed
+      resultStatus: 1
+      duration: 0.132699
       messages: 
       output: 
       stacktrace: 
@@ -434,13 +446,97 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-    m_ResultText: Tests (0,155s)
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAnimationTest.when_closing_index_then_index_is_closed]'
+      name: when_closing_index_then_index_is_closed
+      fullName: Assets.Editor.Script.Tests.Animation.HandAnimationTest.when_closing_index_then_index_is_closed
+      resultStatus: 1
+      duration: 0.0102673
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAnimationTest.when_closing_three_fingers_then_three_fingers_should_be_closed]'
+      name: when_closing_three_fingers_then_three_fingers_should_be_closed
+      fullName: Assets.Editor.Script.Tests.Animation.HandAnimationTest.when_closing_three_fingers_then_three_fingers_should_be_closed
+      resultStatus: 1
+      duration: 0.0093057
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAnimationTest.when_closing_thumb_then_thumb_should_be_closed]'
+      name: when_closing_thumb_then_thumb_should_be_closed
+      fullName: Assets.Editor.Script.Tests.Animation.HandAnimationTest.when_closing_thumb_then_thumb_should_be_closed
+      resultStatus: 1
+      duration: 0.0090253
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAnimationTest.when_opening_hand_then_hand_is_opened]'
+      name: when_opening_hand_then_hand_is_opened
+      fullName: Assets.Editor.Script.Tests.Animation.HandAnimationTest.when_opening_hand_then_hand_is_opened
+      resultStatus: 1
+      duration: 0.0092578
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAnimationTest.when_opening_index_then_index_is_opened]'
+      name: when_opening_index_then_index_is_opened
+      fullName: Assets.Editor.Script.Tests.Animation.HandAnimationTest.when_opening_index_then_index_is_opened
+      resultStatus: 1
+      duration: 0.0092385
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAnimationTest.when_opening_theee_fingers_then_three_fingers_should_be_closed]'
+      name: when_opening_theee_fingers_then_three_fingers_should_be_closed
+      fullName: Assets.Editor.Script.Tests.Animation.HandAnimationTest.when_opening_theee_fingers_then_three_fingers_should_be_closed
+      resultStatus: 1
+      duration: 0.0097388
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAnimationTest.when_opening_thumb_then_thumb_is_opened]'
+      name: when_opening_thumb_then_thumb_is_opened
+      fullName: Assets.Editor.Script.Tests.Animation.HandAnimationTest.when_opening_thumb_then_thumb_is_opened
+      resultStatus: 1
+      duration: 0.0092707
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    m_ResultText: when_closing_index_then_index_is_closed (0,010s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 4aec6309
-      m_LastClickedID: 157543498
-      m_ExpandedIDs: 4cf70588db122194ea28a2ee8b518e074aec6309a2e9c00a0ca1a3247d66eb3f619162446a048345f767404dfb2b3f553e11a759ffffff7f
+      m_SelectedIDs: f14a98db
+      m_LastClickedID: -610776335
+      m_ExpandedIDs: 4cf70588db122194ea28a2ee8b518e074aec6309a2e9c00a3b80c81a0ca1a3247d66eb3f619162446a048345f767404dfb2b3f553e11a759deac085bffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -622,9 +718,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 60370000
-    m_LastClickedID: 0
-    m_ExpandedIDs: 9c84feff228afeff22bbfeffdcbbfeff60bcfeffa0c1feff42cbfeffa0d2feffaed8feffaedbfeffec5bffffa65cffff885dffffca72ffffe67dffffe6fbffff00000000bc320000c4320000d8320000de320000e6320000
+    m_SelectedIDs: 0e350000
+    m_LastClickedID: 13582
+    m_ExpandedIDs: 54a7ffff0ea8ffffeaa8fffff2b7ffff04befffff8c4ffff36cbffffdccfffff60d6fffff0dbffff4ae1ffffc2e7ffff74ecffffe2eeffff38f6fffff0fbffff00000000fe340000043500000e350000143500001c35000022350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -642,7 +738,8 @@ MonoBehaviour:
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
-  m_ExpandedScenes: []
+  m_ExpandedScenes:
+  - Main
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -839,20 +936,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Editor/Script/Tests
+    - Assets/SteamVR/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Editor/Script/Tests
+  - Assets/SteamVR/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: G:\Unity\OpenWorldVR\OpenWorldVR\OpenWorldVR
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 81}
-    m_SelectedIDs: fa2d0000
-    m_LastClickedID: 11770
-    m_ExpandedIDs: 000000003c2a00005a2b0000f62b0000622c0000fa2d00004e310000fe32000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 129}
+    m_SelectedIDs: c42a0000
+    m_LastClickedID: 10948
+    m_ExpandedIDs: 00000000402a00005c2b0000f82b0000642c0000fa2c0000fc2d0000962e0000ce2e00003635000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -880,7 +977,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003c2a0000ec2a00005a2b0000f62b0000622c0000
+    m_ExpandedIDs: 00000000402a00005c2b0000f82b0000642c0000fc2d0000962e0000ce2e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -905,24 +1002,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 60370000
-    m_LastClickedInstanceID: 14176
+    m_SelectedInstanceIDs: 0e350000
+    m_LastClickedInstanceID: 13582
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: d22300000029ffff9c240000b2250000382400003e250000de25000074250000e02500004024000044240000a8320000cc27000014280000322a0000c82700004c360000662a0000682a0000b23a0000762d0000d42f0000fa280000402a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: IAnimator
-      m_OriginalName: IAnimator
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 14176
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
