@@ -1,8 +1,6 @@
-﻿using System;
-using UnityEngine;
-using Valve.VR;
+﻿using UnityEngine;
 
-namespace Assets.Script.Src
+namespace Assets.Script.Src.Animation
 {
     public interface IUnityAnimator
     {

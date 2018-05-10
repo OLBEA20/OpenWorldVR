@@ -13,8 +13,7 @@ namespace Assets.Editor.Script.Tests.Animation
         public void BeforeEveryTest()
         {
             var hand = new GameObject();
-            hand.AddComponent<SkinnedMeshRenderer>();
-            _skinnedMeshRenderer = hand.GetComponent<SkinnedMeshRenderer>();
+            _skinnedMeshRenderer = hand.AddComponent<SkinnedMeshRenderer>();
             _handAppearance = new HandAppearance(_skinnedMeshRenderer);
         }
 

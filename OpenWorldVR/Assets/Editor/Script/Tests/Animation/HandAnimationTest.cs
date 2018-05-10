@@ -1,4 +1,5 @@
 ﻿using Assets.Script.Src;
+using Assets.Script.Src.Animation;
 using Assets.Script.Src.Animation.Hand;
 using NSubstitute;
 using NUnit.Framework;
