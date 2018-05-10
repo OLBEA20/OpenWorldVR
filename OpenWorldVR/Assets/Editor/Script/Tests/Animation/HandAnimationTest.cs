@@ -1,4 +1,5 @@
 ﻿using Assets.Script.Src;
+using Assets.Script.Src.Animation;
 using Assets.Script.Src.Animation.Hand;
 using NSubstitute;
 using NUnit.Framework;
@@ -27,7 +28,7 @@ namespace Assets.Editor.Script.Tests.Animation
         }
 
         [Test]
-        public void when_closing_hand_then_hand_is_closed()
+        public void WhenClosingHand_ThenHandIsClosed()
         {
             _handAnimation.CloseHand();
 
@@ -35,7 +36,7 @@ namespace Assets.Editor.Script.Tests.Animation
         }
 
         [Test]
-        public void when_opening_hand_then_hand_is_opened()
+        public void WhenOpeningHand_ThenHandIsOpened()
         {
             _handAnimation.OpenHand();
 
@@ -43,7 +44,7 @@ namespace Assets.Editor.Script.Tests.Animation
         }
 
         [Test]
-        public void when_closing_three_fingers_then_three_fingers_should_be_closed()
+        public void WhenClosingThreeFingers_ThenThreeFingersShouldBeClosed()
         {
             _handAnimation.CloseThreeFingers(_anObject, _anEventArgs);
 
@@ -51,7 +52,7 @@ namespace Assets.Editor.Script.Tests.Animation
         }
 
         [Test]
-        public void when_opening_theee_fingers_then_three_fingers_should_be_closed()
+        public void WhenOpeningThreeFingers_ThenThreeFingersShouldBeClosed()
         {
             _handAnimation.OpenThreeFingers(_anObject, _anEventArgs);
 
@@ -59,14 +60,14 @@ namespace Assets.Editor.Script.Tests.Animation
         }
 
         [Test]
-        public void when_closing_index_then_index_is_closed()
+        public void WhenClosingIndex_ThenIndexIsClosed()
         {
             _handAnimation.CloseIndex(_anObject, _anEventArgs);
 
             _animator.Received().SetBool("close_index", true);
         }
         [Test]
-        public void when_opening_index_then_index_is_opened()
+        public void WhenOpeningIndex_ThenIndexIsOpened()
         {
             _handAnimation.OpenIndex(_anObject, _anEventArgs);
 
@@ -74,14 +75,14 @@ namespace Assets.Editor.Script.Tests.Animation
         }
 
         [Test]
-        public void when_closing_thumb_then_thumb_should_be_closed()
+        public void WhenClosingThumb_ThenThumbShouldBeClosed()
         {
             _handAnimation.CloseThumb(_anObject, _anEventArgs);
 
             _animator.Received().SetBool("close_thumb", true);
         }
         [Test]
-        public void when_opening_thumb_then_thumb_is_opened()
+        public void WhenOpeningThumb_ThenThumbIsOpened()
         {
             _handAnimation.OpenThumb(_anObject, _anEventArgs);
 
