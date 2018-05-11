@@ -1,4 +1,5 @@
 ﻿using Assets.Script.Src.Interaction;
+using Assets.Script.Src.Interaction.Grab;
 using NUnit.Framework;
 using NSubstitute;
 using UnityEngine;
@@ -22,7 +23,6 @@ namespace Assets.Editor.Script.Tests.Interaction
         [Test]
         public void WhenGrabbingObject_ThenObjectShouldBeConnected()
         {
-            
             var genericGrabbable = new GenericGrabbable(new UnityRigidbody(new Rigidbody()));
 
             genericGrabbable.Grab(_fixedJoint);
