@@ -5,9 +5,9 @@ namespace Assets.Script.Src.Interaction.Teleportation
     public class Teleporter
     {
         private readonly Transform _origin;
-        private LineRenderer _lineRenderer;
+        private LineRenderer[] _lineRenderer;
 
-        public Teleporter(Transform origin, LineRenderer lineRenderer)
+        public Teleporter(Transform origin, LineRenderer[] lineRenderer)
         {
             _origin = origin;
             _lineRenderer = lineRenderer;
@@ -25,9 +25,25 @@ namespace Assets.Script.Src.Interaction.Teleportation
 
         public void UpdateTeleportationLine(Vector3 pointingDirection, float maxDistance)
         {
-            var ray = new Ray(_origin.position, pointingDirection);
-            _lineRenderer.SetPosition(0, _origin.position);
-            _lineRenderer.SetPosition(1, ray.GetPoint(maxDistance));
+            int i = 0;
+            Vector3 lastPosition = _origin.position;
+            foreach (LineRenderer lineRenderer in _lineRenderer)
+            {
+                lineRenderer.enabled = true;
+                Vector3 nextPosition = _origin.position + ((float)++i/10) * pointingDirection;
+                nextPosition.y -= Mathf.Pow(((float)i)/30, 2);
+                lineRenderer.SetPosition(0, lastPosition);
+                lineRenderer.SetPosition(1, nextPosition);
+                lastPosition = nextPosition;
+            }
+        }
+
+        public void HideTeleportationLine()
+        {
+            foreach (LineRenderer lineRenderer in _lineRenderer)
+            {
+                lineRenderer.enabled = false;
+            }
         }
     }
 }

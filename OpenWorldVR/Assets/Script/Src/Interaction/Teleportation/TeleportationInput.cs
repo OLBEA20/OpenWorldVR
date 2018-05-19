@@ -6,12 +6,14 @@ namespace Assets.Script.Src.Interaction.Teleportation
         public SteamVR_TrackedController Controller;
         public Transform Head;
         public Transform IndexTip;
+        public Material linesMaterial;
 
         private bool _gripped;
         private bool _thumbClosed;
 
         private Teleporter _teleporter;
-        private LineRenderer _lineRenderer;
+        private LineRendererFactory _lineRendererFactory;
+        private LineRenderer[] _lineRenderers;
 
         public void OnEnable()
         {
@@ -39,14 +41,27 @@ namespace Assets.Script.Src.Interaction.Teleportation
         {
             _gripped = false;
             _thumbClosed = false;
-            _lineRenderer = gameObject.AddComponent<LineRenderer>();
-            _teleporter = new Teleporter(IndexTip, _lineRenderer);
+            _lineRendererFactory = new LineRendererFactory();
+            InitializeLineRenderers();
+            _teleporter = new Teleporter(IndexTip, _lineRenderers);
+        }
+        
+        private void InitializeLineRenderers()
+        {
+            _lineRenderers = _lineRendererFactory.CreateLineRenderers(500, linesMaterial, 0.01f, 0.01f);
+            foreach(LineRenderer lineRenderer in _lineRenderers)
+            {
+                lineRenderer.gameObject.transform.SetParent(gameObject.transform);
+            }
         }
 	
         public void Update () {
             if (_gripped && _thumbClosed)
             {
-                _teleporter.UpdateTeleportationLine(-IndexTip.right, 100);
+                _teleporter.UpdateTeleportationLine(-IndexTip.right, 10);
+            }
+            else {
+                _teleporter.HideTeleportationLine();
             }
         }
 
@@ -72,7 +87,7 @@ namespace Assets.Script.Src.Interaction.Teleportation
 
         public void Teleport(object sender, ClickedEventArgs eventArgs)
         {
-            _teleporter.Teleport(Head, IndexTip.forward, 100);
+            _teleporter.Teleport(Head, -IndexTip.right, 10);
         }
     }
 }
