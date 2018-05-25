@@ -6,6 +6,7 @@ namespace Assets.Script.Src.Interaction.Teleportation
         public SteamVR_TrackedController Controller;
         public Transform Head;
         public Transform IndexTip;
+        public GameObject TeleportCircle;
         public Material linesMaterial;
 
         private bool _gripped;
@@ -43,13 +44,13 @@ namespace Assets.Script.Src.Interaction.Teleportation
             _thumbClosed = false;
             _lineRendererFactory = new LineRendererFactory();
             InitializeLineRenderers();
-            _teleporter = new Teleporter(IndexTip, _lineRenderers);
+            _teleporter = new Teleporter(IndexTip, new TeleportationTarget(TeleportCircle.transform, TeleportCircle.GetComponent<MeshRenderer>(), false) , _lineRenderers);
         }
         
         private void InitializeLineRenderers()
         {
-            _lineRenderers = _lineRendererFactory.CreateLineRenderers(500, linesMaterial, 0.01f, 0.01f);
-            foreach(LineRenderer lineRenderer in _lineRenderers)
+            _lineRenderers = _lineRendererFactory.CreateLineRenderers(1500, linesMaterial, 0.01f, 0.01f);
+            foreach(var lineRenderer in _lineRenderers)
             {
                 lineRenderer.gameObject.transform.SetParent(gameObject.transform);
             }
@@ -58,10 +59,10 @@ namespace Assets.Script.Src.Interaction.Teleportation
         public void Update () {
             if (_gripped && _thumbClosed)
             {
-                _teleporter.UpdateTeleportationLine(-IndexTip.right, 10);
+                _teleporter.UpdateTeleportationArc(-IndexTip.right);
             }
             else {
-                _teleporter.HideTeleportationLine();
+                _teleporter.HideTeleportationArc();
             }
         }
 
@@ -87,7 +88,7 @@ namespace Assets.Script.Src.Interaction.Teleportation
 
         public void Teleport(object sender, ClickedEventArgs eventArgs)
         {
-            _teleporter.Teleport(Head, -IndexTip.right, 10);
+            _teleporter.Teleport(Head);
         }
     }
 }

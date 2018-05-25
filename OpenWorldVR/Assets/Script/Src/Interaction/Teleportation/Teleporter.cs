@@ -5,45 +5,61 @@ namespace Assets.Script.Src.Interaction.Teleportation
     public class Teleporter
     {
         private readonly Transform _origin;
-        private LineRenderer[] _lineRenderer;
+        private readonly TeleportationTarget _teleportationTarget;
+        private readonly LineRenderer[] _lineRenderer;
+        private readonly float _steps = 0.005f;
+        private readonly float _gravity = 500;
+        private bool _collided;
 
-        public Teleporter(Transform origin, LineRenderer[] lineRenderer)
+        private readonly Arc _arc;
+
+        public Teleporter(Transform origin, TeleportationTarget teleporationTarget, LineRenderer[] lineRenderer)
         {
             _origin = origin;
+            _teleportationTarget = teleporationTarget;
+            _arc = new Arc(_steps, _origin);
             _lineRenderer = lineRenderer;
         }
 
-        public void Teleport(Transform objectToTeleport, Vector3 pointingDirection, float maxDistance)
+        public void Teleport(Transform objectToTeleport)
         {
-            var ray = new Ray(_origin.position, pointingDirection);
-            RaycastHit hitInfo;
-            if (Physics.Raycast(ray, out hitInfo, maxDistance))
-            {
-                objectToTeleport.position = hitInfo.point;
-            }
+            _teleportationTarget.Teleport(objectToTeleport);
         }
 
-        public void UpdateTeleportationLine(Vector3 pointingDirection, float maxDistance)
+        public void UpdateTeleportationArc(Vector3 pointingDirection)
         {
-            int i = 0;
-            Vector3 lastPosition = _origin.position;
-            foreach (LineRenderer lineRenderer in _lineRenderer)
+            _collided = false;
+            UpdateTeleporationLines(pointingDirection); 
+        }
+
+        private void UpdateTeleporationLines(Vector3 pointingDirection)
+        {
+            var i = 0;
+            _teleportationTarget.Hide();
+            var lastPosition = _arc.CalculateCoordinateAtTime(pointingDirection, _gravity, i);
+            foreach (var lineRenderer in _lineRenderer)
             {
-                lineRenderer.enabled = true;
-                Vector3 nextPosition = _origin.position + ((float)++i/10) * pointingDirection;
-                nextPosition.y -= Mathf.Pow(((float)i)/30, 2);
-                lineRenderer.SetPosition(0, lastPosition);
-                lineRenderer.SetPosition(1, nextPosition);
+                var nextPosition = _arc.CalculateCoordinateAtTime(pointingDirection, _gravity, ++i);
+                UpdateLineRenderer(lineRenderer, lastPosition, nextPosition);
+                _teleportationTarget.UpdateTeleportationTarget(lastPosition, nextPosition); 
                 lastPosition = nextPosition;
             }
         }
 
-        public void HideTeleportationLine()
+        private void UpdateLineRenderer(LineRenderer lineRenderer, Vector3 startPosition, Vector3 endPosition)
         {
-            foreach (LineRenderer lineRenderer in _lineRenderer)
+                lineRenderer.enabled = true;
+                lineRenderer.SetPosition(0, startPosition);
+                lineRenderer.SetPosition(1, endPosition);
+        } 
+
+        public void HideTeleportationArc()
+        {
+            foreach (var lineRenderer in _lineRenderer)
             {
                 lineRenderer.enabled = false;
             }
+            _teleportationTarget.Hide();
         }
     }
 }
