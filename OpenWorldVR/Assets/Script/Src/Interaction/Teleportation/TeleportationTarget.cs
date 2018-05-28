@@ -1,18 +1,23 @@
-﻿using UnityEngine;
+﻿using Assets.Script.Src.Physics;
+using UnityEngine;
 
 namespace Assets.Script.Src.Interaction.Teleportation
 {
+    
     public class TeleportationTarget
     {
+        private readonly Vector3 _offset = Vector3.zero; 
         private readonly Transform _target;
         private readonly MeshRenderer _meshRenderer;
+        private readonly IRaycast _raycast;
         public bool Enabled;
 
-        public TeleportationTarget(Transform target, MeshRenderer meshRenderer, bool enabled)
+        public TeleportationTarget(Transform target, MeshRenderer meshRenderer, IRaycast raycast, bool enabled)
         {
             _target = target;
             _meshRenderer = meshRenderer;
-            Enabled = enabled; 
+            _raycast = raycast;
+            Enabled = enabled;
         }
 
         public void Hide()
@@ -23,7 +28,7 @@ namespace Assets.Script.Src.Interaction.Teleportation
 
         public void UpdateTeleportationTarget(Vector3 lastPosition, Vector3 nextPosition)
         {
-            if (CheckForObstacleBetween(lastPosition, nextPosition))
+            if (_raycast.CheckForObstacleBetweenPoints(lastPosition, nextPosition) && !Enabled)
             {
                 Show();
                 _target.position = lastPosition;
@@ -40,14 +45,16 @@ namespace Assets.Script.Src.Interaction.Teleportation
         {
             if(Enabled)
             {
-                objectToTeleport.position = _target.position;
+                Teleport(objectToTeleport, Vector3.zero);
             }
         }
 
-        private bool CheckForObstacleBetween(Vector3 startPoint, Vector3 endPoint)
+        public void Teleport(Transform objectToTeleport, Vector3 offset) 
         {
-            var ray = new Ray(startPoint, endPoint - startPoint);
-            return Physics.Raycast(ray , (endPoint - startPoint).magnitude);
+            if (Enabled)
+            {
+                objectToTeleport.position = _target.position - new Vector3(offset.x, 0, offset.z);
+            }
         }
     }
 }

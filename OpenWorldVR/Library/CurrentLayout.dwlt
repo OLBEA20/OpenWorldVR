@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 3}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -40,17 +40,17 @@ MonoBehaviour:
     y: 0
     width: 1261
     height: 602
-  m_MinSize: {x: 204, y: 221}
+  m_MinSize: {x: 104, y: 121}
   m_MaxSize: {x: 4004, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 18}
   - {fileID: 16}
   - {fileID: 19}
   - {fileID: 15}
   - {fileID: 13}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 4
+  m_LastSelected: 0
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -72,7 +72,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &4
 MonoBehaviour:
@@ -135,10 +135,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 683, y: 342}
+  m_MinSize: {x: 583, y: 342}
   m_MaxSize: {x: 12008, y: 8042}
   vertical: 0
-  controlID: 57
+  controlID: 65
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -159,10 +159,10 @@ MonoBehaviour:
     y: 0
     width: 1643
     height: 947
-  m_MinSize: {x: 406, y: 342}
+  m_MinSize: {x: 306, y: 342}
   m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
-  controlID: 58
+  controlID: 66
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -183,10 +183,10 @@ MonoBehaviour:
     y: 0
     width: 1643
     height: 602
-  m_MinSize: {x: 406, y: 221}
+  m_MinSize: {x: 306, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 59
+  controlID: 67
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -230,8 +230,8 @@ MonoBehaviour:
     y: 602
     width: 1643
     height: 345
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 20}
@@ -387,8 +387,8 @@ MonoBehaviour:
     - id: '[G:/Unity/OpenWorldVR/OpenWorldVR/OpenWorldVR/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll][suite]'
       name: Assembly-CSharp-Editor.dll
       fullName: G:/Unity/OpenWorldVR/OpenWorldVR/OpenWorldVR/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 1.1452287
       messages: 
       output: 
       stacktrace: 
@@ -396,71 +396,11 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 1
-    - id: '[Assembly-CSharp-Editor][ArcTest][suite]'
-      name: ArcTest
-      fullName: ArcTest
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-    - id: '[Assembly-CSharp-Editor][ArcTest.GivenInitialTangent_WhenCalculatingCoordinatesAtOneUnitTimeLater_ThenXZCoordinatesAreIncrementedAccoordingToInitialTangent]'
-      name: GivenInitialTangent_WhenCalculatingCoordinatesAtOneUnitTimeLater_ThenXZCoordinatesAreIncrementedAccoordingToInitialTangent
-      fullName: ArcTest.GivenInitialTangent_WhenCalculatingCoordinatesAtOneUnitTimeLater_ThenXZCoordinatesAreIncrementedAccoordingToInitialTangent
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-    - id: '[Assembly-CSharp-Editor][ArcTest.GivenStepsSize_WhenCalculatingCoordinatesAtOneUnitTimeLater_ThenXZCoordinatesAreIncrementedByInitialTangentTimesStepsSize]'
-      name: GivenStepsSize_WhenCalculatingCoordinatesAtOneUnitTimeLater_ThenXZCoordinatesAreIncrementedByInitialTangentTimesStepsSize
-      fullName: ArcTest.GivenStepsSize_WhenCalculatingCoordinatesAtOneUnitTimeLater_ThenXZCoordinatesAreIncrementedByInitialTangentTimesStepsSize
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-    - id: '[Assembly-CSharp-Editor][ArcTest.GivenVelocity_WhenCalculatingCoordinates_ThenYCoordinateIsTimeDividedByVelocitySquared]'
-      name: GivenVelocity_WhenCalculatingCoordinates_ThenYCoordinateIsTimeDividedByVelocitySquared
-      fullName: ArcTest.GivenVelocity_WhenCalculatingCoordinates_ThenYCoordinateIsTimeDividedByVelocitySquared
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-    - id: '[Assembly-CSharp-Editor][ArcTest.WhenRetrievingCoordinatesAtTimeZero_ThenCoordinatesShouldBeOrigin]'
-      name: WhenRetrievingCoordinatesAtTimeZero_ThenCoordinatesShouldBeOrigin
-      fullName: ArcTest.WhenRetrievingCoordinatesAtTimeZero_ThenCoordinatesShouldBeOrigin
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
     - id: '[Assets][suite]'
       name: Assets
       fullName: Assets
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 1.1311284
       messages: 
       output: 
       stacktrace: 
@@ -471,8 +411,8 @@ MonoBehaviour:
     - id: '[Assets.Editor][suite]'
       name: Editor
       fullName: Assets.Editor
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 1.1175536
       messages: 
       output: 
       stacktrace: 
@@ -483,8 +423,8 @@ MonoBehaviour:
     - id: '[Assets.Editor.Script][suite]'
       name: Script
       fullName: Assets.Editor.Script
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 1.1033767
       messages: 
       output: 
       stacktrace: 
@@ -495,8 +435,8 @@ MonoBehaviour:
     - id: '[Assets.Editor.Script.Tests][suite]'
       name: Tests
       fullName: Assets.Editor.Script.Tests
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 1.0901971
       messages: 
       output: 
       stacktrace: 
@@ -507,8 +447,8 @@ MonoBehaviour:
     - id: '[Assets.Editor.Script.Tests.Animation][suite]'
       name: Animation
       fullName: Assets.Editor.Script.Tests.Animation
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.3875998
       messages: 
       output: 
       stacktrace: 
@@ -519,8 +459,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAnimationTest][suite]'
       name: HandAnimationTest
       fullName: Assets.Editor.Script.Tests.Animation.HandAnimationTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.2956278
       messages: 
       output: 
       stacktrace: 
@@ -531,8 +471,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAnimationTest.WhenClosingHand_ThenHandIsClosed]'
       name: WhenClosingHand_ThenHandIsClosed
       fullName: Assets.Editor.Script.Tests.Animation.HandAnimationTest.WhenClosingHand_ThenHandIsClosed
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.1368896
       messages: 
       output: 
       stacktrace: 
@@ -543,8 +483,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAnimationTest.WhenClosingIndex_ThenIndexIsClosed]'
       name: WhenClosingIndex_ThenIndexIsClosed
       fullName: Assets.Editor.Script.Tests.Animation.HandAnimationTest.WhenClosingIndex_ThenIndexIsClosed
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0112516
       messages: 
       output: 
       stacktrace: 
@@ -555,8 +495,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAnimationTest.WhenClosingThreeFingers_ThenThreeFingersShouldBeClosed]'
       name: WhenClosingThreeFingers_ThenThreeFingersShouldBeClosed
       fullName: Assets.Editor.Script.Tests.Animation.HandAnimationTest.WhenClosingThreeFingers_ThenThreeFingersShouldBeClosed
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0092906
       messages: 
       output: 
       stacktrace: 
@@ -567,8 +507,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAnimationTest.WhenClosingThumb_ThenThumbShouldBeClosed]'
       name: WhenClosingThumb_ThenThumbShouldBeClosed
       fullName: Assets.Editor.Script.Tests.Animation.HandAnimationTest.WhenClosingThumb_ThenThumbShouldBeClosed
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0093885
       messages: 
       output: 
       stacktrace: 
@@ -579,8 +519,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAnimationTest.WhenOpeningHand_ThenHandIsOpened]'
       name: WhenOpeningHand_ThenHandIsOpened
       fullName: Assets.Editor.Script.Tests.Animation.HandAnimationTest.WhenOpeningHand_ThenHandIsOpened
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0098927
       messages: 
       output: 
       stacktrace: 
@@ -591,8 +531,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAnimationTest.WhenOpeningIndex_ThenIndexIsOpened]'
       name: WhenOpeningIndex_ThenIndexIsOpened
       fullName: Assets.Editor.Script.Tests.Animation.HandAnimationTest.WhenOpeningIndex_ThenIndexIsOpened
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0091439
       messages: 
       output: 
       stacktrace: 
@@ -603,8 +543,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAnimationTest.WhenOpeningThreeFingers_ThenThreeFingersShouldBeClosed]'
       name: WhenOpeningThreeFingers_ThenThreeFingersShouldBeClosed
       fullName: Assets.Editor.Script.Tests.Animation.HandAnimationTest.WhenOpeningThreeFingers_ThenThreeFingersShouldBeClosed
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0093638
       messages: 
       output: 
       stacktrace: 
@@ -615,8 +555,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAnimationTest.WhenOpeningThumb_ThenThumbIsOpened]'
       name: WhenOpeningThumb_ThenThumbIsOpened
       fullName: Assets.Editor.Script.Tests.Animation.HandAnimationTest.WhenOpeningThumb_ThenThumbIsOpened
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0095234
       messages: 
       output: 
       stacktrace: 
@@ -627,8 +567,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAppearanceTest][suite]'
       name: HandAppearanceTest
       fullName: Assets.Editor.Script.Tests.Animation.HandAppearanceTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0662618
       messages: 
       output: 
       stacktrace: 
@@ -639,8 +579,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAppearanceTest.WhenHidingHand_ThenMeshRendererShouldBeDisabled]'
       name: WhenHidingHand_ThenMeshRendererShouldBeDisabled
       fullName: Assets.Editor.Script.Tests.Animation.HandAppearanceTest.WhenHidingHand_ThenMeshRendererShouldBeDisabled
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0120846
       messages: 
       output: 
       stacktrace: 
@@ -651,8 +591,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Animation.HandAppearanceTest.WhenShowingHand_ThenMeshRendererShouldBeEnabled]'
       name: WhenShowingHand_ThenMeshRendererShouldBeEnabled
       fullName: Assets.Editor.Script.Tests.Animation.HandAppearanceTest.WhenShowingHand_ThenMeshRendererShouldBeEnabled
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0096674
       messages: 
       output: 
       stacktrace: 
@@ -663,8 +603,8 @@ MonoBehaviour:
     - id: '[Assets.Editor.Script.Tests.Interaction][suite]'
       name: Interaction
       fullName: Assets.Editor.Script.Tests.Interaction
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.5038147
       messages: 
       output: 
       stacktrace: 
@@ -675,8 +615,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Interaction.GenericGrabbableTest][suite]'
       name: GenericGrabbableTest
       fullName: Assets.Editor.Script.Tests.Interaction.GenericGrabbableTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.1344368
       messages: 
       output: 
       stacktrace: 
@@ -687,8 +627,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Interaction.GenericGrabbableTest.WhenGrabbingObject_ThenObjectShouldBeConnected]'
       name: WhenGrabbingObject_ThenObjectShouldBeConnected
       fullName: Assets.Editor.Script.Tests.Interaction.GenericGrabbableTest.WhenGrabbingObject_ThenObjectShouldBeConnected
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0165092
       messages: 
       output: 
       stacktrace: 
@@ -699,8 +639,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Interaction.GenericGrabbableTest.WhenThrowingObject_ThenForceIsAppliedToObject]'
       name: WhenThrowingObject_ThenForceIsAppliedToObject
       fullName: Assets.Editor.Script.Tests.Interaction.GenericGrabbableTest.WhenThrowingObject_ThenForceIsAppliedToObject
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0117768
       messages: 
       output: 
       stacktrace: 
@@ -711,8 +651,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Interaction.GenericGrabbableTest.WhenThrowingObject_ThenObjectShouldBeDisconnected]'
       name: WhenThrowingObject_ThenObjectShouldBeDisconnected
       fullName: Assets.Editor.Script.Tests.Interaction.GenericGrabbableTest.WhenThrowingObject_ThenObjectShouldBeDisconnected
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0105155
       messages: 
       output: 
       stacktrace: 
@@ -723,8 +663,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Interaction.GenericGrabbableTest.WhenThrowingObject_ThenTorqueIsAppliedToObject]'
       name: WhenThrowingObject_ThenTorqueIsAppliedToObject
       fullName: Assets.Editor.Script.Tests.Interaction.GenericGrabbableTest.WhenThrowingObject_ThenTorqueIsAppliedToObject
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0097812
       messages: 
       output: 
       stacktrace: 
@@ -735,10 +675,12 @@ MonoBehaviour:
     - id: '[Assets.Editor.Script.Tests.Interaction.Teleportation][suite]'
       name: Teleportation
       fullName: Assets.Editor.Script.Tests.Interaction.Teleportation
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.3491013
       messages: 
-      output: 
+      output: "You are trying to create a MonoBehaviour using the 'new' keyword.  This
+        is not allowed.  MonoBehaviours can only be added using AddComponent(). Alternatively,
+        your script can inherit from ScriptableObject or no base class at all\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -747,8 +689,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest][suite]'
       name: TeleportationTargetTest
       fullName: Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.3353834
       messages: 
       output: 
       stacktrace: 
@@ -756,11 +698,59 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 1
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest.GivenObstacleBetweenTwoPoints_WhenUpdatingTeleportationTarget_ThenTargetIsVisible]'
+      name: GivenObstacleBetweenTwoPoints_WhenUpdatingTeleportationTarget_ThenTargetIsVisible
+      fullName: Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest.GivenObstacleBetweenTwoPoints_WhenUpdatingTeleportationTarget_ThenTargetIsVisible
+      resultStatus: 1
+      duration: 0.0107083
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest.GivenObstacleBetweenTwoPoints_WhenUpdatingTeleportationTarget_ThenTeleportationTargetPositionIsUpdated]'
+      name: GivenObstacleBetweenTwoPoints_WhenUpdatingTeleportationTarget_ThenTeleportationTargetPositionIsUpdated
+      fullName: Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest.GivenObstacleBetweenTwoPoints_WhenUpdatingTeleportationTarget_ThenTeleportationTargetPositionIsUpdated
+      resultStatus: 1
+      duration: 0.011887
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest.GivenOffset_WhenTeleportingObject_ThenXZComposantOfOffsetShouldBeConsidered]'
+      name: GivenOffset_WhenTeleportingObject_ThenXZComposantOfOffsetShouldBeConsidered
+      fullName: Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest.GivenOffset_WhenTeleportingObject_ThenXZComposantOfOffsetShouldBeConsidered
+      resultStatus: 1
+      duration: 0.0100818
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest.GivenTeleportationTargetAlreadyEnabled_WhenUpdatingTeleportationTarget_ThenTeleportationTargetPositionIsNotUpdated]'
+      name: GivenTeleportationTargetAlreadyEnabled_WhenUpdatingTeleportationTarget_ThenTeleportationTargetPositionIsNotUpdated
+      fullName: Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest.GivenTeleportationTargetAlreadyEnabled_WhenUpdatingTeleportationTarget_ThenTeleportationTargetPositionIsNotUpdated
+      resultStatus: 1
+      duration: 0.0122644
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest.GivenTeleportationTargetIsDisabled_WhenTeleporatingObject_ThenObjectShouldNotBeTeleported]'
       name: GivenTeleportationTargetIsDisabled_WhenTeleporatingObject_ThenObjectShouldNotBeTeleported
       fullName: Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest.GivenTeleportationTargetIsDisabled_WhenTeleporatingObject_ThenObjectShouldNotBeTeleported
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0104026
       messages: 
       output: 
       stacktrace: 
@@ -771,8 +761,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest.GivenTeleportationTargetIsEnabled_WhenTeleportatingObject_ThenObjectShouldBeTeleportedAtTheRightPosition]'
       name: GivenTeleportationTargetIsEnabled_WhenTeleportatingObject_ThenObjectShouldBeTeleportedAtTheRightPosition
       fullName: Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest.GivenTeleportationTargetIsEnabled_WhenTeleportatingObject_ThenObjectShouldBeTeleportedAtTheRightPosition
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0118756
       messages: 
       output: 
       stacktrace: 
@@ -783,8 +773,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest.WhenHidingTeleportationTarget_ThenTeleportationTargetShouldNotBeEnabled]'
       name: WhenHidingTeleportationTarget_ThenTeleportationTargetShouldNotBeEnabled
       fullName: Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest.WhenHidingTeleportationTarget_ThenTeleportationTargetShouldNotBeEnabled
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0128352
       messages: 
       output: 
       stacktrace: 
@@ -795,8 +785,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest.WhenHidingTeleportationTarget_ThenTeleportationTargetShouldNotBeVisible]'
       name: WhenHidingTeleportationTarget_ThenTeleportationTargetShouldNotBeVisible
       fullName: Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest.WhenHidingTeleportationTarget_ThenTeleportationTargetShouldNotBeVisible
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0107784
       messages: 
       output: 
       stacktrace: 
@@ -807,8 +797,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest.WhenShowingTeleportationTarget_ThenTeleporationTargetShouldBeVisible]'
       name: WhenShowingTeleportationTarget_ThenTeleporationTargetShouldBeVisible
       fullName: Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest.WhenShowingTeleportationTarget_ThenTeleporationTargetShouldBeVisible
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0102432
       messages: 
       output: 
       stacktrace: 
@@ -819,8 +809,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest.WhenShowingTeleportationTarget_ThenTeloportationTargetShouldBeEnabled]'
       name: WhenShowingTeleportationTarget_ThenTeloportationTargetShouldBeEnabled
       fullName: Assets.Editor.Script.Tests.Interaction.Teleportation.TeleportationTargetTest.WhenShowingTeleportationTarget_ThenTeloportationTargetShouldBeEnabled
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0105188
       messages: 
       output: 
       stacktrace: 
@@ -828,11 +818,11 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-    - id: '[Assembly-CSharp-Editor][LineRendererFactoryTest][suite]'
-      name: LineRendererFactoryTest
-      fullName: LineRendererFactoryTest
-      resultStatus: 0
-      duration: 0
+    - id: '[Assets.Editor.Script.Tests.LineRenderer][suite]'
+      name: LineRenderer
+      fullName: Assets.Editor.Script.Tests.LineRenderer
+      resultStatus: 1
+      duration: 0.0552606
       messages: 
       output: 
       stacktrace: 
@@ -840,11 +830,23 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 1
-    - id: '[Assembly-CSharp-Editor][LineRendererFactoryTest.GivenANumberOfWantedLineRenderers_WhenCreatingLineRenderers_ThenWantedNumberOfLineRenders]'
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.LineRenderer.LineRendererFactoryTest][suite]'
+      name: LineRendererFactoryTest
+      fullName: Assets.Editor.Script.Tests.LineRenderer.LineRendererFactoryTest
+      resultStatus: 1
+      duration: 0.0440058
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.LineRenderer.LineRendererFactoryTest.GivenANumberOfWantedLineRenderers_WhenCreatingLineRenderers_ThenWantedNumberOfLineRenders]'
       name: GivenANumberOfWantedLineRenderers_WhenCreatingLineRenderers_ThenWantedNumberOfLineRenders
-      fullName: LineRendererFactoryTest.GivenANumberOfWantedLineRenderers_WhenCreatingLineRenderers_ThenWantedNumberOfLineRenders
-      resultStatus: 0
-      duration: 0
+      fullName: Assets.Editor.Script.Tests.LineRenderer.LineRendererFactoryTest.GivenANumberOfWantedLineRenderers_WhenCreatingLineRenderers_ThenWantedNumberOfLineRenders
+      resultStatus: 1
+      duration: 0.0103053
       messages: 
       output: 
       stacktrace: 
@@ -852,23 +854,11 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-    - id: '[Assembly-CSharp-Editor][LineRendererFactoryTest.GivenNoParameters_WhenCreatingLineRenderer_ThenDefaultValuesAreUsed]'
-      name: GivenNoParameters_WhenCreatingLineRenderer_ThenDefaultValuesAreUsed
-      fullName: LineRendererFactoryTest.GivenNoParameters_WhenCreatingLineRenderer_ThenDefaultValuesAreUsed
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-    - id: '[Assembly-CSharp-Editor][LineRendererFactoryTest.WhenCreatingLineRenderers_ThenLineRenderersAreCreated]'
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.LineRenderer.LineRendererFactoryTest.WhenCreatingLineRenderers_ThenLineRenderersAreCreated]'
       name: WhenCreatingLineRenderers_ThenLineRenderersAreCreated
-      fullName: LineRendererFactoryTest.WhenCreatingLineRenderers_ThenLineRenderersAreCreated
-      resultStatus: 0
-      duration: 0
+      fullName: Assets.Editor.Script.Tests.LineRenderer.LineRendererFactoryTest.WhenCreatingLineRenderers_ThenLineRenderersAreCreated
+      resultStatus: 1
+      duration: 0.009347
       messages: 
       output: 
       stacktrace: 
@@ -876,14 +866,86 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-    m_ResultText: GivenTeleportationTargetIsEnabled_WhenTeleportatinObject_ThenObjectShouldBeTeleportedAtTheRightPosit
-      (0,010s)
+    - id: '[Assets.Editor.Script.Tests.Utilities][suite]'
+      name: Utilities
+      fullName: Assets.Editor.Script.Tests.Utilities
+      resultStatus: 1
+      duration: 0.0931218
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Utilities.ArcTest][suite]'
+      name: ArcTest
+      fullName: Assets.Editor.Script.Tests.Utilities.ArcTest
+      resultStatus: 1
+      duration: 0.0823015
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Utilities.ArcTest.GivenInitialTangent_WhenCalculatingCoordinatesAtOneUnitTimeLater_ThenXZCoordinatesAreIncrementedAccoordingToInitialTangent]'
+      name: GivenInitialTangent_WhenCalculatingCoordinatesAtOneUnitTimeLater_ThenXZCoordinatesAreIncrementedAccoordingToInitialTangent
+      fullName: Assets.Editor.Script.Tests.Utilities.ArcTest.GivenInitialTangent_WhenCalculatingCoordinatesAtOneUnitTimeLater_ThenXZCoordinatesAreIncrementedAccoordingToInitialTangent
+      resultStatus: 1
+      duration: 0.0103851
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Utilities.ArcTest.GivenStepsSize_WhenCalculatingCoordinatesAtOneUnitTimeLater_ThenXZCoordinatesAreIncrementedByInitialTangentTimesStepsSize]'
+      name: GivenStepsSize_WhenCalculatingCoordinatesAtOneUnitTimeLater_ThenXZCoordinatesAreIncrementedByInitialTangentTimesStepsSize
+      fullName: Assets.Editor.Script.Tests.Utilities.ArcTest.GivenStepsSize_WhenCalculatingCoordinatesAtOneUnitTimeLater_ThenXZCoordinatesAreIncrementedByInitialTangentTimesStepsSize
+      resultStatus: 1
+      duration: 0.0092401
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Utilities.ArcTest.GivenVelocity_WhenCalculatingCoordinates_ThenYCoordinateIsTimeDividedByVelocitySquared]'
+      name: GivenVelocity_WhenCalculatingCoordinates_ThenYCoordinateIsTimeDividedByVelocitySquared
+      fullName: Assets.Editor.Script.Tests.Utilities.ArcTest.GivenVelocity_WhenCalculatingCoordinates_ThenYCoordinateIsTimeDividedByVelocitySquared
+      resultStatus: 1
+      duration: 0.0092831
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][Assets.Editor.Script.Tests.Utilities.ArcTest.WhenRetrievingCoordinatesAtTimeZero_ThenCoordinatesShouldBeOrigin]'
+      name: WhenRetrievingCoordinatesAtTimeZero_ThenCoordinatesShouldBeOrigin
+      fullName: Assets.Editor.Script.Tests.Utilities.ArcTest.WhenRetrievingCoordinatesAtTimeZero_ThenCoordinatesShouldBeOrigin
+      resultStatus: 1
+      duration: 0.0091189
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    m_ResultText: GivenObstacleBetweenTwoPoints_WhenUpdatingTeleportationTarget_ThenTargetIsVisible
+      (0,011s)
     m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 96}
-      m_SelectedIDs: b5bf324c
-      m_LastClickedID: 1278394293
-      m_ExpandedIDs: 5dc1cd814cf70588db12219437be0f96068a72bf9d5008cf1c20fad3ea28a2ee8b518e074aec6309a2e9c00a0ca1a3247d66eb3f619162446a04834535c7384df767404dfb2b3f553e11a75948c3a27fffffff7f
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 6b78a9fb
+      m_LastClickedID: -72779669
+      m_ExpandedIDs: 5dc1cd814cf70588db12219437be0f96068a72bf9d5008cfea28a2ee8b518e074aec6309a2e9c00a0ca1a3247d66eb3f619162446a04834535c7384df767404dfb2b3f553e11a75948c3a27fffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1065,9 +1127,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 90300000
-    m_LastClickedID: 12432
-    m_ExpandedIDs: 68fbffffd0fbffffd6fbffffe0fbffffe4fbffff0000000030300000663000007e30000094300000a2300000e8300000f4300000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 02c3fffff0fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1085,8 +1147,7 @@ MonoBehaviour:
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
-  m_ExpandedScenes:
-  - Main
+  m_ExpandedScenes: []
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -1117,14 +1178,14 @@ MonoBehaviour:
     height: 581
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 2846.5691409774686
+  lastFramingTime: 32491.902355180493
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.31159735, y: -0.17922902, z: -0.4708593}
+    m_Target: {x: 4.9636545, y: -3.1254432, z: -2.228014}
     speed: 2
-    m_Value: {x: 0.31159735, y: -0.17922902, z: -0.4708593}
+    m_Value: {x: 4.9636545, y: -3.1254432, z: -2.228014}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1152,13 +1213,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.093258224, y: 0.9058342, z: -0.27013162, w: -0.312724}
+    m_Target: {x: 0.05454702, y: 0.9404335, z: -0.2819868, w: 0.18191507}
     speed: 2
-    m_Value: {x: -0.093258224, y: 0.9058342, z: -0.27013162, w: -0.312724}
+    m_Value: {x: 0.054547023, y: 0.9404335, z: -0.2819868, w: 0.18191509}
   m_Size:
-    m_Target: 3.297232
+    m_Target: 7.5107517
     speed: 2
-    m_Value: 3.297232
+    m_Value: 7.5107517
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1283,20 +1344,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Materials/Material
+    - Assets/Script/Src/Interaction/Teleportation
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Materials/Material
+  - Assets/Script/Src/Interaction/Teleportation
   m_LastFoldersGridSize: 16
   m_LastProjectPath: G:\Unity\OpenWorldVR\OpenWorldVR\OpenWorldVR
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 95}
-    m_SelectedIDs: de2a0000
-    m_LastClickedID: 10974
-    m_ExpandedIDs: 000000006a2a0000e02a0000262b0000482b0000982b0000382c0000a62c00003c2d0000502d0000422e0000822e0000e02e0000182f0000b82f0000e62f000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 141}
+    m_SelectedIDs: 542f0000
+    m_LastClickedID: 12116
+    m_ExpandedIDs: 000000006a2a0000e42a00002c2b00004e2b00009e2b00003e2c0000ac2c0000422d0000582d00004c2e00008c2e0000ea2e0000222f0000c42f0000f22f000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1324,7 +1385,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006a2a0000e02a0000262b0000482b0000982b0000382c0000a62c00003c2d0000502d0000422e0000822e0000e02e0000182f0000b82f0000e62f0000
+    m_ExpandedIDs: 000000006a2a0000e42a00002c2b00004e2b00009e2b00003e2c0000ac2c0000422d0000582d00004c2e00008c2e0000ea2e0000222f0000c42f0000f22f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1349,9 +1410,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 7e300000
-    m_LastClickedInstanceID: 12414
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: d22300000029ffff9c240000b2250000382400003e250000de25000074250000e02500004024000044240000a8320000cc27000014280000322a0000c82700004c360000662a0000682a0000b23a0000762d0000d42f0000fa280000402a000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1378,7 +1439,7 @@ MonoBehaviour:
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
-  m_DirectoriesAreaWidth: 116
+  m_DirectoriesAreaWidth: 190
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
