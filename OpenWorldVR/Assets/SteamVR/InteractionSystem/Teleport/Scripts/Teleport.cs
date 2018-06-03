@@ -175,7 +175,7 @@ namespace Valve.VR.InteractionSystem
 
 			if ( player == null )
 			{
-				Debug.LogError( "Teleport: No Player instance found in map." );
+				Debug.LogError( "TeleportObjectWithOffset: No Player instance found in map." );
 				Destroy( this.gameObject );
 				return;
 			}
@@ -863,7 +863,7 @@ namespace Valve.VR.InteractionSystem
 			{
 				teleportPosition = teleportPoint.transform.position;
 
-				//Teleport to a new scene
+				//TeleportObjectWithOffset to a new scene
 				if ( teleportPoint.teleportType == TeleportPoint.TeleportPointType.SwitchToNewScene )
 				{
 					teleportPoint.TeleportToScene();
@@ -984,7 +984,7 @@ namespace Valve.VR.InteractionSystem
 					{
 						if ( !isShowingHint )
 						{
-							ControllerButtonHints.ShowTextHint( hand, EVRButtonId.k_EButton_SteamVR_Touchpad, "Teleport" );
+							ControllerButtonHints.ShowTextHint( hand, EVRButtonId.k_EButton_SteamVR_Touchpad, "TeleportObjectWithOffset" );
 							prevBreakTime = Time.time;
 							prevHapticPulseTime = Time.time;
 						}

@@ -4,26 +4,26 @@ using UnityEngine;
 
 namespace Assets.Script.Src.Interaction.Teleportation
 {
-    public class Teleporter
+    public class Teleporter : ITeleporter
     {
-        private readonly TeleportationTarget _teleportationTarget;
+        private readonly ITeleportationTarget _teleportationTarget;
         private readonly ILineRenderer[] _lineRenderers;
 
         private readonly IArc _arc;
 
-        public Teleporter(TeleportationTarget teleporationTarget, IArc arc, ILineRenderer[] lineRenderers)
+        public Teleporter(ITeleportationTarget teleporationTarget, IArc arc, ILineRenderer[] lineRenderers)
         {
             _teleportationTarget = teleporationTarget;
             _arc = arc; 
             _lineRenderers = lineRenderers;
         }
 
-        public void Teleport(Transform objectToTeleport, Vector3 offset)
+        public void TeleportObjectWithOffset(Transform objectToTeleport, Vector3 offset)
         {
             _teleportationTarget.Teleport(objectToTeleport, offset);
         }
 
-        public void UpdateTeleportationArc(Vector3 pointingDirection, float velocity)
+        public void DrawTeleportationArc(Vector3 pointingDirection, float velocity)
         {
             var time = 0;
             _teleportationTarget.Hide();

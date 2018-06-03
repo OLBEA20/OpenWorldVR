@@ -1,77 +1,34 @@
-﻿using Assets.Script.Src.LineRenderer;
-using Assets.Script.Src.Physics;
-using Assets.Script.Src.Utilities;
-using UnityEngine;
-using Valve.VR;
+﻿using UnityEngine;
 
 namespace Assets.Script.Src.Interaction.Teleportation
 {
-    public class TeleportationInput : MonoBehaviour
+    public class TeleportationInput : ITeleporationInput
     {
-        public SteamVR_TrackedController Controller;
-        public SteamVR_Controller.Device Device;
-        public Transform Head;
-        public Transform Referentiel;
-        public Transform IndexTip;
-        public GameObject TeleportCircle;
-        public Material LinesMaterial;
-
-        private bool _gripped;
         private bool _thumbClosed;
+        private bool _gripped;
+        private bool _indexClosed;
+        private readonly float _velocity;
 
-        private readonly float _steps = 0.01f;
-        private readonly float _velocity = 150;
-        private Teleporter _teleporter;
-        private LineRendererFactory _lineRendererFactory;
-        private ILineRenderer[] _lineRenderers;
+        private readonly Transform _origin;
+        private readonly Transform _playerReferentiel;
+        private readonly Transform _playerHead;
+        private readonly ITeleporter _teleporter;
 
-        public void OnEnable()
+        public TeleportationInput(float velocity, ITeleporter teleporter, Transform origin, Transform playerReferentiel,
+            Transform playerHead)
         {
-            Controller.Gripped += Grip;
-            Controller.Ungripped += UnGrip;
-
-            Controller.PadTouched += CloseThumb;
-            Controller.PadUntouched += OpenThumb;
-
-            Controller.PadClicked += Teleport;
+            _velocity = velocity;
+            _teleporter = teleporter;
+            _origin = origin;
+            _playerReferentiel = playerReferentiel;
+            _playerHead = playerHead;
         }
 
-        public void OnDisable()
+        public void Update(float teleportionMultiplier)
         {
-            Controller.Gripped -= Grip;
-            Controller.Ungripped -= UnGrip;
-
-            Controller.PadTouched -= CloseThumb;
-            Controller.PadUntouched -= OpenThumb;
-
-            Controller.PadClicked -= Teleport;
-        }
-
-        public void Start()
-        {
-            Device = SteamVR_Controller.Input((int) Controller.controllerIndex);
-            _gripped = false;
-            _thumbClosed = false;
-            _lineRendererFactory = new LineRendererFactory();
-            InitializeLineRenderers();
-            _teleporter =
-                new Teleporter(
-                    new TeleportationTarget(TeleportCircle.transform, TeleportCircle.GetComponent<MeshRenderer>(),
-                        new UnityRaycast(), false), new Arc(_steps, IndexTip), _lineRenderers);
-        }
-
-        private void InitializeLineRenderers()
-        {
-            _lineRenderers =
-                _lineRendererFactory.CreateUnityLineRenderers(1000, gameObject.transform, LinesMaterial, 0.01f);
-        }
-
-        public void Update()
-        {
-            if (_gripped && _thumbClosed)
+            if (_gripped && _thumbClosed && !_indexClosed)
             {
-                var touchedPad = Device.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);
-                _teleporter.UpdateTeleportationArc(-IndexTip.right, _velocity * (1 + (touchedPad.y / 3)));
+                _teleporter.DrawTeleportationArc(-_origin.right, _velocity * (1 + (teleportionMultiplier / 3)));
             }
             else
             {
@@ -79,29 +36,21 @@ namespace Assets.Script.Src.Interaction.Teleportation
             }
         }
 
-        public void Grip(object sender, ClickedEventArgs eventArgs)
+        public void Teleport(object send, ClickedEventArgs enventArgs)
         {
-            _gripped = true;
+            _teleporter.TeleportObjectWithOffset(_playerReferentiel, _playerHead.localPosition);
         }
 
-        public void UnGrip(object sender, ClickedEventArgs eventArgs)
-        {
-            _gripped = false;
-        }
+        public void Grip(object sender, ClickedEventArgs eventArgs) => _gripped = true;
 
-        public void CloseThumb(object sender, ClickedEventArgs eventArgs)
-        {
-            _thumbClosed = true;
-        }
+        public void UnGrip(object sender, ClickedEventArgs eventArgs) => _gripped = false;
 
-        public void OpenThumb(object sender, ClickedEventArgs eventArgs)
-        {
-            _thumbClosed = false;
-        }
+        public void CloseThumb(object sender, ClickedEventArgs eventArgs) => _thumbClosed = true;
 
-        public void Teleport(object sender, ClickedEventArgs eventArgs)
-        {
-            _teleporter.Teleport(Referentiel, Head.localPosition);
-        }
+        public void OpenThumb(object sender, ClickedEventArgs eventArgs) => _thumbClosed = false;
+
+        public void CloseIndex(object sender, ClickedEventArgs eventArgs) => _indexClosed = true;
+
+        public void OpendIndex(object sender, ClickedEventArgs eventArgs) => _indexClosed = false;
     }
 }
