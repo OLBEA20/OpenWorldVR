@@ -21,5 +21,10 @@ namespace Assets.Script.Src.Interaction.Grab
         {
             return _grabbable;
         }
+
+        public void SetGrabbable(IGrabbable grabbable)
+        {
+            _grabbable = grabbable;
+        }
     }
 }
